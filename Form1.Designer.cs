@@ -38,6 +38,8 @@ namespace FunctionChart
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.clearButton = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.DtextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -120,11 +122,30 @@ namespace FunctionChart
             this.clearButton.UseVisualStyleBackColor = true;
             this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(1018, 243);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(13, 13);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "d";
+            // 
+            // DtextBox
+            // 
+            this.DtextBox.Location = new System.Drawing.Point(1012, 269);
+            this.DtextBox.Name = "DtextBox";
+            this.DtextBox.Size = new System.Drawing.Size(41, 20);
+            this.DtextBox.TabIndex = 10;
+            this.DtextBox.Text = "0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1062, 570);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.DtextBox);
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -153,6 +174,8 @@ namespace FunctionChart
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button clearButton;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox DtextBox;
     }
 }
 

@@ -12,7 +12,7 @@ namespace FunctionChart
 {
     public partial class Form1 : Form
     {
-        int a, b, c;
+        int a, b, c, d;
         Graphics graphics;
 
         private void clearButton_Click(object sender, EventArgs e)
@@ -31,6 +31,7 @@ namespace FunctionChart
             a = Convert.ToInt32(AtextBox.Text);
             b = Convert.ToInt32(CtextBox.Text);
             c = Convert.ToInt32(BtextBox.Text);
+            d = Convert.ToInt32(DtextBox.Text); // смещение по оси X
 
             Pen pen = new Pen(Color.Black, 3f);
             Pen penXY = new Pen(Color.Gray, 1f);
@@ -45,9 +46,9 @@ namespace FunctionChart
                 i1 = 500 - i;
 
                 // points[i] = new Point(i, (int)(Math.Sin((double)i / 10) * 100 + 200));
-                y = 500-(a * i * i + b * i + c);
-                points[i] = new Point(i+460, y);
-                nPoints[i]= new Point(460 - i, y);
+                y = 500-(a * (int)Math.Pow(i,2) + b * i + c);
+                points[i] = new Point(i+460+d, y);
+                nPoints[i]= new Point(460 - i+d, y);
                 pointsX[i] = new Point(i, 500);
                 pointsY[i] = new Point(460, i);
             }
